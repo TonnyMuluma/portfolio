@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Tonny Matuku Muluma — IT Professional specializing in Cybersecurity, Networking & Backend Development" />
+  <title>Tonny Matuku Muluma | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">&lt;TMM /&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#cv" class="nav-link">CV</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, World. I'm</p>
+      <h1 class="hero-name">Tonny Matuku<br><span class="accent">Muluma</span></h1>
+      <div class="hero-roles">
+        <span class="role-tag">IT Professional</span>
+        <span class="role-divider">×</span>
+        <span class="role-tag">Backend Developer</span>
+        <span class="role-divider">×</span>
+        <span class="role-tag">Cybersecurity Enthusiast</span>
+      </div>
+      <p class="hero-tagline">I build secure, reliable systems and enjoy learning how technology works — from network
+        cables to Laravel APIs to vulnerability hunting.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/TonnyMuluma" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tonny-matuku-32b514276/" target="_blank" rel="noopener noreferrer"
+          title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/Tonnie_tech02" target="_blank" rel="noopener noreferrer" title="Twitter/X">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://tryhackme.com/p/TonnyMuluma" target="_blank" rel="noopener noreferrer" title="TryHackMe">
+          <i class="fas fa-shield-halved"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-header">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">terminal</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <p><span class="t-prompt">$</span> whoami</p>
+        <p class="t-output">tonny_matuku_muluma</p>
+        <p><span class="t-prompt">$</span> cat skills.txt</p>
+        <p class="t-output">PHP · MySQL · Python · Laravel</p>
+        <p class="t-output">Networking · Nmap · Wireshark · Linux</p>
+        <p><span class="t-prompt">$</span> cat interests.txt</p>
+        <p class="t-output">Cybersecurity · Backend Dev · CTFs</p>
+        <p><span class="t-prompt">$</span> ls projects/</p>
+        <p class="t-output">laravel-api/ net-sentinel/ ctf-writeups/</p>
+        <p><span class="t-prompt">$</span> <span class="cursor">█</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-img-placeholder">
+            <img src="images/profile.jpeg" alt="Tonny Matuku Muluma"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <i class="fas fa-user" style="display:none;"></i>
+          </div>
+          <div class="about-badge"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</div>
+          <div class="about-badge" style="margin-top:0.5rem;"><i class="fas fa-envelope"></i> tonnymatuku02@gmail.com
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>Who am I?</h3>
+          <p>
+            I'm <strong>Tonny Matuku Muluma</strong>, an IT professional based in Nairobi, Kenya with a focused interest
+            in <strong>cybersecurity</strong>, <strong>networking</strong>, and <strong>backend development</strong>.
+            I'm driven by a desire to understand how systems work at a deep level — and more importantly, how to build
+            and keep them secure.
+          </p>
+          <p>
+            I have hands-on experience in <em>network troubleshooting</em> and IT support, with a strong ability to
+            communicate complex technical concepts clearly to both technical and non-technical audiences.
+          </p>
+          <p>
+            I'm actively building expertise in backend development with <strong>PHP, Laravel, MySQL, and
+              Python</strong>,
+            and developing practical cybersecurity skills through platforms like TryHackMe and real-world CTF
+            challenges. My long-term goal is to grow into a <strong>cybersecurity professional</strong> who engineers
+            secure, reliable systems from the ground up.
+          </p>
+          <div class="about-tags">
+            <span><i class="fas fa-wifi"></i> Network Troubleshooting</span>
+            <span><i class="fas fa-code"></i> Backend Development</span>
+            <span><i class="fas fa-shield-halved"></i> Security Research</span>
+            <span><i class="fas fa-lightbulb"></i> Problem Solving</span>
+            <span><i class="fas fa-headset"></i> IT Support</span>
+          </div>
+          <div class="about-facts">
+            <div class="fact"><span class="fact-num">3+</span><span class="fact-label">Projects Built</span></div>
+            <div class="fact"><span class="fact-num">5+</span><span class="fact-label">IT Skills</span></div>
+            <div class="fact"><span class="fact-num">1</span><span class="fact-label">Goal: CyberSec Pro</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Skills & <span class="accent">Tech Stack</span></h2>
+      <p class="section-subtitle">A mix of hands-on IT experience and actively growing development skills.</p>
+
+      <div class="skills-grid">
+        <div class="skill-category fade-up">
+          <h4><i class="fas fa-server"></i> Backend Development</h4>
+          <div class="skill-tags">
+            <span>PHP</span><span>Laravel</span><span>MySQL</span><span>REST
+              APIs</span><span>Composer</span><span>Python</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h4><i class="fas fa-globe"></i> Frontend</h4>
+          <div class="skill-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Blade Templates</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h4><i class="fas fa-shield-halved"></i> Cybersecurity</h4>
+          <div class="skill-tags">
+            <span>Nmap</span><span>Wireshark</span><span>Burp Suite</span><span>Metasploit</span><span>OWASP Top
+              10</span><span>Linux Security</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h4><i class="fas fa-network-wired"></i> Networking & IT</h4>
+          <div class="skill-tags">
+            <span>Network Troubleshooting</span><span>TCP/IP</span><span>Windows OS</span><span>Technical
+              Support</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h4><i class="fas fa-tools"></i> Tools & Platforms</h4>
+          <div class="skill-tags">
+            <span>Linux (Kali / Ubuntu)</span><span>Git</span><span>GitHub</span><span>VS
+              Code</span><span>Postman</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h4><i class="fas fa-chalkboard-teacher"></i> Soft Skills</h4>
+          <div class="skill-tags">
+            <span>Technical Teaching</span><span>Problem
+              Solving</span><span>Self-Learning</span><span>Communication</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-bars fade-up">
+        <h3 class="skills-bars-title">Proficiency Levels</h3>
+        <div class="skill-bar-item">
+          <div class="bar-label"><span>PHP & MySQL</span><span class="bar-pct">70%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="70"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="bar-label"><span>Laravel Framework</span><span class="bar-pct">60%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="60"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="bar-label"><span>Python</span><span class="bar-pct">55%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="55"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="bar-label"><span>Networking & IT Support</span><span class="bar-pct">80%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="bar-label"><span>Linux & Command Line</span><span class="bar-pct">65%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="65"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="bar-label"><span>Cybersecurity Tools</span><span class="bar-pct">50%</span></div>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="50"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      <p class="section-subtitle">Real-world builds across backend development and cybersecurity.</p>
+      <div class="projects-grid">
+        <div class="project-card featured">
+          <div class="project-tag">Laravel · Backend</div>
+          <h3 class="project-title">SecureVault API</h3>
+          <p class="project-desc">A full-featured RESTful API built with Laravel — handling user auth (JWT), role-based
+            access control, encrypted data storage, and rate limiting. Production-ready with full test coverage.</p>
+          <div class="project-tech"><span>Laravel</span><span>MySQL</span><span>JWT</span><span>PHPUnit</span></div>
+          <div class="project-links">
+            <a href="https://github.com/TonnyMuluma/securevault-api" target="_blank" rel="noopener noreferrer"
+              class="btn btn-sm">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+
+            <a href="https://github.com/TonnyMuluma/securevault-api#readme" target="_blank" rel="noopener noreferrer"
+              class="btn btn-sm btn-outline">
+              <i class="fas fa-book"></i> Docs
+            </a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">Python · Security Tool</div>
+          <h3 class="project-title">NetSentinel</h3>
+          <p class="project-desc">A Python-based network scanner and vulnerability mapper. Uses Nmap integration to
+            enumerate open ports, detect services, and flag known CVEs automatically.</p>
+          <div class="project-tech"><span>Python</span><span>Nmap</span><span>CVE API</span></div>
+          <div class="project-links">
+            <a href="https://github.com/TonnyMuluma/netsentinel" target="_blank" rel="noopener noreferrer"
+              class="btn btn-sm">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">CTF · Web Security</div>
+          <h3 class="project-title">CTF Write-ups</h3>
+          <p class="project-desc">A curated collection of my CTF challenge solutions covering SQL Injection, XSS, buffer
+            overflows, and privilege escalation — with detailed write-ups for each.</p>
+          <div class="project-tech"><span>OWASP</span><span>Burp Suite</span><span>Linux</span></div>
+          <div class="project-links"> <a href="https://github.com/TonnyMuluma/ctf-writeups" class="btn btn-sm"><i
+                class="fab fa-github"></i> GitHub</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section certs-section">
+    <div class="container">
+      <h2 class="section-title"><span class="accent">Certifications</span> & Learning</h2>
+      <p class="section-subtitle">Continuous learning is part of the job — here's my progress and what's coming next.
+      </p>
+
+      <div class="certs-grid">
+        <div class="cert-card in-progress fade-up">
+          <div class="cert-icon-wrap"><i class="fas fa-shield-halved"></i></div>
+          <div class="cert-badge in-progress-badge">In Progress</div>
+          <h4>TryHackMe — Pre-Security Path</h4>
+          <p>Covering networking basics, web fundamentals, Linux, and introductory security concepts.</p>
+          <div class="cert-platform"><i class="fas fa-external-link-alt"></i> TryHackMe</div>
+        </div>
+        <div class="cert-card in-progress fade-up">
+          <div class="cert-icon-wrap"><i class="fab fa-python"></i></div>
+          <div class="cert-badge in-progress-badge">In Progress</div>
+          <h4>Python for Everybody — Coursera</h4>
+          <p>Learning Python fundamentals: data structures, file handling, APIs, and scripting for automation.</p>
+          <div class="cert-platform"><i class="fas fa-external-link-alt"></i> Coursera / Dr. Chuck</div>
+        </div>
+        <div class="cert-card planned fade-up">
+          <div class="cert-icon-wrap"><i class="fas fa-network-wired"></i></div>
+          <div class="cert-badge planned-badge">Planned</div>
+          <h4>CompTIA Network+</h4>
+          <p>Targeting foundational networking certification to formalize practical network troubleshooting experience.
+          </p>
+          <div class="cert-platform"><i class="fas fa-bullseye"></i> Target: 2025</div>
+        </div>
+        <div class="cert-card planned fade-up">
+          <div class="cert-icon-wrap"><i class="fas fa-user-secret"></i></div>
+          <div class="cert-badge planned-badge">Planned</div>
+          <h4>eJPT — eLearnSecurity Junior Penetration Tester</h4>
+          <p>Entry-level penetration testing cert covering enumeration, exploitation, and reporting.</p>
+          <div class="cert-platform"><i class="fas fa-bullseye"></i> Target: 2025–2026</div>
+        </div>
+        <div class="cert-card planned fade-up">
+          <div class="cert-icon-wrap"><i class="fas fa-lock"></i></div>
+          <div class="cert-badge planned-badge">Long-Term Goal</div>
+          <h4>CompTIA Security+</h4>
+          <p>Industry-recognized cybersecurity certification covering threats, architecture, and risk management.</p>
+          <div class="cert-platform"><i class="fas fa-bullseye"></i> Target: 2026</div>
+        </div>
+        <div class="cert-card add-cert fade-up">
+          <div class="cert-icon-wrap"><i class="fas fa-plus-circle"></i></div>
+          <h4>More coming soon...</h4>
+          <p>Keep learning. Keep earning.</p>
+        </div>
+      </div>
+
+      <div class="learning-platforms fade-up">
+        <h3>Where I Learn</h3>
+        <div class="platforms-row">
+          <div class="platform-chip"><i class="fas fa-fire"></i> TryHackMe</div>
+          <div class="platform-chip"><i class="fas fa-cube"></i> HackTheBox</div>
+          <div class="platform-chip"><i class="fas fa-graduation-cap"></i> Coursera</div>
+          <div class="platform-chip"><i class="fab fa-youtube"></i> YouTube</div>
+          <div class="platform-chip"><i class="fas fa-book"></i> OWASP Docs</div>
+          <div class="platform-chip"><i class="fas fa-code"></i> PHP Docs / Laravel Docs</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="section cv-section">
+    <div class="container">
+      <h2 class="section-title">My <span class="accent">CV</span></h2>
+      <div class="cv-wrapper">
+        <div class="cv-preview">
+          <div class="cv-placeholder"><i class="fas fa-file-pdf"></i>
+            <p>CV Preview</p>
+          </div>
+        </div>
+        <div class="cv-info">
+          <h3>Download My Résumé</h3>
+          <p>A clean, professional CV outlining my skills, experience, projects, and education.</p>
+          <ul class="cv-highlights">
+            <li><i class="fas fa-check"></i> Backend Development (Laravel, PHP)</li>
+            <li><i class="fas fa-check"></i> Cybersecurity Projects & CTFs</li>
+            <li><i class="fas fa-check"></i> Education & Certifications</li>
+          </ul>
+          <a href="cv/resume.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+      <p class="section-subtitle">Have a project, opportunity, or just want to say hi? My inbox is open.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item"><i class="fas fa-envelope"></i><span>tonnymatuku02@gmail.com</span></div>
+          <div class="contact-item"><i class="fab fa-github"></i><a href="https://github.com/TonnyMuluma"
+              target="_blank" style="color:inherit;">github.com/TonnyMuluma</a></div>
+          <div class="contact-item"><i class="fab fa-linkedin"></i><a
+              href="https://www.linkedin.com/in/tonny-matuku-32b514276/" target="_blank"
+              style="color:inherit;">linkedin.com/in/tonny-matuku-32b514276</a></div>
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Nairobi, Kenya</span></div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><input type="text" id="name" placeholder="Your Name" required /></div>
+          <div class="form-group"><input type="email" id="email" placeholder="Your Email" required /></div>
+          <div class="form-group"><input type="text" id="subject" placeholder="Subject" /></div>
+          <div class="form-group"><textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo">&lt;TMM /&gt;</a>
+        <p class="footer-tagline">Built with care. Secured by design.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/TonnyMuluma" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/tonny-matuku-32b514276/" target="_blank"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/Tonnie_tech02" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Tonny Matuku Muluma</strong>. All rights reserved.</p>
+        <p>Hosted on <a href="https://vercel.com" target="_blank">Vercel</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

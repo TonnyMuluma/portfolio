@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tonny Matuku Muluma — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #0066cc;
+      --text: #1a1a2e;
+      --muted: #555e6e;
+      --border: #dde3ec;
+      --bg-left: #f4f7fb;
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: #e8ecf2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    .page {
+      background: #fff;
+      width: 210mm;
+      min-height: 297mm;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr;
+      position: relative;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      grid-column: 1 / -1;
+      background: var(--text);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .header-name h1 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+    }
+    .header-name h1 span { color: #00c8e8; }
+    .header-name p {
+      font-size: 0.72rem;
+      color: #8899aa;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+    .header-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      text-align: right;
+    }
+    .header-contacts span {
+      font-size: 0.72rem;
+      color: #8899aa;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      justify-content: flex-end;
+    }
+    .header-contacts .dot {
+      width: 5px; height: 5px;
+      background: #00c8e8;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── LEFT COLUMN ── */
+    .col-left {
+      background: var(--bg-left);
+      border-right: 1px solid var(--border);
+      padding: 1.8rem 1.4rem;
+    }
+
+    /* ── RIGHT COLUMN ── */
+    .col-right {
+      padding: 1.8rem 2rem;
+    }
+
+    /* ── SECTION TITLES ── */
+    .sec-title {
+      font-family: var(--font-head);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .cv-section { margin-bottom: 1.6rem; }
+
+    /* ── SKILLS ── */
+    .skill-group { margin-bottom: 0.7rem; }
+    .skill-group-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+    .skill-pills span {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text);
+    }
+
+    /* ── EDUCATION ── */
+    .edu-degree {
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .edu-school {
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin: 0.15rem 0;
+    }
+    .edu-date {
+      font-size: 0.65rem;
+      color: var(--muted);
+    }
+
+    /* ── CERTS ── */
+    .cert-item { margin-bottom: 0.7rem; }
+    .cert-name {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .cert-issuer {
+      font-size: 0.65rem;
+      color: var(--muted);
+    }
+    .cert-badge {
+      display: inline-block;
+      font-size: 0.55rem;
+      padding: 0.1rem 0.4rem;
+      background: #e8f4ff;
+      border: 1px solid #b3d4f5;
+      color: var(--accent);
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-left: 0.3rem;
+    }
+
+    /* ── JOBS ── */
+    .job { margin-bottom: 1.3rem; padding-bottom: 1.3rem; border-bottom: 1px solid var(--border); }
+    .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem; }
+    .job-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .job-attach {
+      font-size: 0.55rem;
+      padding: 0.1rem 0.4rem;
+      background: #f0ebff;
+      border: 1px solid #c4b0f5;
+      color: #6d3ecc;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-left: 0.4rem;
+    }
+    .job-company {
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-bottom: 0.1rem;
+    }
+    .job-date {
+      font-size: 0.62rem;
+      color: var(--muted);
+      white-space: nowrap;
+      background: #f0f3f8;
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      height: fit-content;
+    }
+    .job-points { list-style: none; margin-top: 0.4rem; }
+    .job-points li {
+      font-size: 0.7rem;
+      color: var(--muted);
+      padding-left: 0.9rem;
+      position: relative;
+      margin-bottom: 0.2rem;
+      line-height: 1.5;
+    }
+    .job-points li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 0.6rem; top: 0.1rem; }
+
+    /* ── PROJECTS ── */
+    .project-item { margin-bottom: 0.9rem; }
+    .project-name {
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.15rem;
+    }
+    .tech-tag {
+      font-size: 0.58rem;
+      padding: 0.1rem 0.4rem;
+      background: #e8f4ff;
+      border: 1px solid #b3d4f5;
+      color: var(--accent);
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    .project-desc {
+      font-size: 0.68rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── PRINT BUTTON ── */
+    .print-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,102,204,0.4);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      z-index: 999;
+    }
+    .print-btn:hover { background: #0055aa; transform: translateY(-2px); }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      @page { size: A4; margin: 0; }
+      body { background: none; padding: 0; }
+      .page { box-shadow: none; width: 100%; min-height: 100vh; }
+      .print-btn { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">
+  ⬇ Save as PDF
+</button>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-name">
+      <h1>Tonny Matuku <span>Muluma</span></h1>
+      <p>IT Professional &nbsp;·&nbsp; Backend Developer &nbsp;·&nbsp; Cybersecurity Enthusiast</p>
+    </div>
+    <div class="header-contacts">
+      <span><span class="dot"></span> tonnymatuku02@gmail.com</span>
+      <span><span class="dot"></span> Nairobi, Kenya</span>
+      <span><span class="dot"></span> github.com/TonnyMuluma</span>
+      <span><span class="dot"></span> linkedin.com/in/tonny-matuku-32b514276</span>
+    </div>
+  </div>
+
+  <!-- LEFT COLUMN -->
+  <div class="col-left">
+
+    <!-- SKILLS -->
+    <div class="cv-section">
+      <div class="sec-title">Skills</div>
+      <div class="skill-group">
+        <div class="skill-group-label">Backend</div>
+        <div class="skill-pills"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>REST APIs</span><span>Python</span><span>Composer</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Frontend</div>
+        <div class="skill-pills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Blade</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Cybersecurity</div>
+        <div class="skill-pills"><span>Nmap</span><span>Wireshark</span><span>Burp Suite</span><span>Metasploit</span><span>OWASP Top 10</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Networking</div>
+        <div class="skill-pills"><span>TCP/IP</span><span>Network Troubleshooting</span><span>WiFi Setup</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Tools</div>
+        <div class="skill-pills"><span>Linux (Kali/Ubuntu)</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Postman</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Soft Skills</div>
+        <div class="skill-pills"><span>Communication</span><span>Problem Solving</span><span>Self-Learning</span></div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="cv-section">
+      <div class="sec-title">Education</div>
+      <div class="edu-degree">Diploma in Information Communication Technology</div>
+      <div class="edu-school">Thika Technical Training Institute</div>
+      <div class="edu-date">Completed July 2025</div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="cv-section">
+      <div class="sec-title">Certifications</div>
+      <div class="cert-item">
+        <div class="cert-name">Networking Basics</div>
+        <div class="cert-issuer">Cisco Networking Academy</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Introduction to Cybersecurity</div>
+        <div class="cert-issuer">ICT Authority Kenya · Cisco Networking Academy</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">TryHackMe Pre-Security Path <span class="cert-badge">In Progress</span></div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Python for Everybody — Coursera <span class="cert-badge">In Progress</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="col-right">
+
+    <!-- WORK EXPERIENCE -->
+    <div class="cv-section">
+      <div class="sec-title">Work Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">ICT Trainer</div>
+            <div class="job-company">Thika Talents Technical College</div>
+          </div>
+          <div class="job-date">Nov 2025 – Present</div>
+        </div>
+        <ul class="job-points">
+          <li>Deliver practical lessons on Microsoft Office applications (Word, Excel, PowerPoint).</li>
+          <li>Guide hands-on lab sessions and support students in building core ICT competencies.</li>
+          <li>Prepare lesson plans, notes, and assessments including tests and practical tasks.</li>
+          <li>Oversee computer lab equipment and software, reporting and resolving technical issues.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">WiFi Installation Assistant</div>
+            <div class="job-company">Spantech Systems Limited · Thika, Kenya</div>
+          </div>
+          <div class="job-date">Aug – Nov 2024</div>
+        </div>
+        <ul class="job-points">
+          <li>Installed and configured routers, access points, and network devices for clients.</li>
+          <li>Troubleshot WiFi coverage issues and optimized access point placement.</li>
+          <li>Advised clients on network security best practices and basic troubleshooting.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">ICT Assistant <span class="job-attach">Industrial Attachment</span></div>
+            <div class="job-company">Kenya Institute of Software Engineering · Thika, Kenya</div>
+          </div>
+          <div class="job-date">Aug – Nov 2023</div>
+        </div>
+        <ul class="job-points">
+          <li>Installed, configured, and maintained computer systems across multiple departments.</li>
+          <li>Provided user support by diagnosing and resolving hardware, software, and network issues.</li>
+          <li>Maintained computer labs ensuring systems remained updated, optimized, and secure.</li>
+          <li>Conducted end-user training sessions on Microsoft Office 365 and basic ICT operations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="cv-section">
+      <div class="sec-title">Projects</div>
+      <div class="project-item">
+        <div class="project-name">SecureVault API <span class="tech-tag">Laravel · MySQL · JWT</span></div>
+        <div class="project-desc">Production-ready RESTful API with JWT auth, role-based access control, encrypted storage, and rate limiting.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">NetSentinel <span class="tech-tag">Python · Nmap</span></div>
+        <div class="project-desc">Network scanner and vulnerability mapper that enumerates open ports, detects services, and flags known CVEs.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">CTF Write-ups <span class="tech-tag">OWASP · Burp Suite</span></div>
+        <div class="project-desc">Curated CTF challenge solutions covering SQL Injection, XSS, buffer overflows, and privilege escalation.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
